@@ -7,12 +7,12 @@ import java.util.List;
 
 /***
  * @author syq
- * @description It describes the flow of one hundred race
+ * @description It describes the flow of two hundred race
  */
-public class RaceOneHundred extends Race{
+public class RaceTwoHundred extends Race{
     private List<Double> timeArray=new ArrayList<Double>();
-    RaceOneHundred(){
-        this.meter = 100;
+    RaceTwoHundred(){
+        this.meter = 200;
     }
     @Override
     public int Ready() {
@@ -29,7 +29,7 @@ public class RaceOneHundred extends Race{
     public int Run() {
         PauseRandomTime();
         for(int i=0;i<9;i++){
-            timeArray.add((int)(Math.random()*900)/100.0+10);
+            timeArray.add((int)(Math.random()*900)/100.0+20);
         }
 
         return 1;

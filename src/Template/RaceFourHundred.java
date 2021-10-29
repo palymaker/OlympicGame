@@ -7,16 +7,16 @@ import java.util.List;
 
 /***
  * @author syq
- * @description It describes the flow of one hundred race
+ * @description It describes the flow of four hundred race
  */
-public class RaceOneHundred extends Race{
+public class RaceFourHundred extends Race{
     private List<Double> timeArray=new ArrayList<Double>();
-    RaceOneHundred(){
-        this.meter = 100;
+    RaceFourHundred(){
+        this.meter = 400;
     }
     @Override
     public int Ready() {
-        System.out.println("This is "+meter+" race");
+        System.out.println("This is "+meter+" race!");
         System.out.println("On your Mark!");
         PauseRandomTime();
         System.out.println("Set!");
@@ -29,7 +29,7 @@ public class RaceOneHundred extends Race{
     public int Run() {
         PauseRandomTime();
         for(int i=0;i<9;i++){
-            timeArray.add((int)(Math.random()*900)/100.0+10);
+            timeArray.add((int)(Math.random()*2000)/100.0+43);
         }
 
         return 1;
